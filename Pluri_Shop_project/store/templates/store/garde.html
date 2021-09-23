@@ -1,0 +1,36 @@
+{% extends 'store/bases.html' %}
+
+{% block content %}
+
+
+
+<div class="big_containeur">
+    <div class="commande">LANCEZ VOS COMMANDES ICI!!!</div>
+    <div class="small_containeur">
+
+
+        <div class="article_disponible">
+            {% for arts in compte %}
+                <div class="article_all">
+                    <a href="{% url 'store:detail_article' article_id=arts.id %}"><div class="article_image">
+                    <img src="{{arts.article_image.url}}" class="image_bloc" >
+                    </div></a>
+                    <div class="article_name">
+                        <h3>{{arts.article_name}}</h3>
+                    </div>
+                    <div class="article_price">
+                         <h3>Prix:{{arts.article_price}}Fcfa</h3>
+                    </div>
+                    {% if arts.article_available %}
+                    <div class="article_availabe">
+                        <h3>Article disponible</h3>
+                    </div>
+                    {% endif%}
+
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

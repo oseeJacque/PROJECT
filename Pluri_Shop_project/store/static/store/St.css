@@ -1,0 +1,241 @@
+
+{% load static %}
+body{
+    margin: opx;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+li{ /*Suppression des points devant les listes*/
+    list-style: none;
+}
+                        /* Style specifique au fichier index.html*/
+
+.tete{
+position: fixed;
+width:100%;
+height:auto;
+}
+header{
+    width:80% ;
+    margin-left: 10%;
+    position: fixed;
+    height: auto;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 1.3em;
+    background-image: linear-gradient(to bottom,white,rgba(62, 210, 236, 0.637),rgba(0, 0, 0, 0.7));
+    border: 2px solid rgba(255, 255, 255, 0.6);
+
+}
+
+#logo{
+    width: 20%;
+    height:20%;
+    margin-left:3%;
+    margin-right:5%;
+}
+
+#menu{
+    margin-right:10%;
+    color: black;
+}
+
+#menu ul li{
+    margin:2%;
+    font-size: 1.4em;
+}
+
+#recherche{
+    text-align: center;
+}
+
+.big_containeur{
+width:100%;
+height:auto;
+position:absolute;
+margin-top:5%;
+
+}
+.small_containeur{
+display:flex;
+}
+
+.commande{
+position:relative;
+margin-top:5%;
+width:100%;
+text-align:center;
+font-size=1.5em;
+}
+
+.article_disponible{
+position:relative;
+margin-top:5%
+width: 60%;
+margin:0 20%;
+display: flex;
+flex-wrap:wrap;
+}
+.article_availabe{
+width:80%;
+margin-left:10%;
+color: black;
+background-image: linear-gradient(to bottom,white,rgba(62, 210, 236, 0.637),rgba(0, 0, 0, 0.7));
+text-align:center;
+margin:10px;
+}
+.article_all{
+width:250px;
+margin:2%;
+max-height:500px;
+border:2px solid rgba(0,0,0,0.6);
+}
+.image_bloc{
+max-width:100%;
+height:300px;
+object-fit:cover;
+}
+
+
+
+.article_price{
+
+}
+                     /* Style specific au fichier index.html*/
+
+                    /*Style communs aux fichiers formulaire*/
+
+ form{
+    position:absolute;
+    top:20%;
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+}
+    legend{
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.containeur{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.labels{
+    font-weight:bold;
+    font-size: 1.3em;
+}
+
+.inputs{
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+input,select{
+    width: 100%;
+    height: 20px;
+}
+
+button{
+    text-align: center;
+    width:80%;
+    height:30px;
+    margin-left: 10%;
+}
+
+input:hover,select:hover,textarea:hover{
+    border: 2px solid rgba(62, 210, 236, 0.637);
+}
+
+button:hover{
+    background: rgba(62, 210, 236, 0.637);
+    color: black;
+}
+
+option:hover{
+    background:rgba(62, 210, 236, 0.637);
+    color: rgba(5, 5, 5, 0.76);
+}
+
+                        /*Style communs aux fichiers*/
+
+                /* Style spécifique au fichier user_compte.html*/
+.choice{
+    width: 50%;
+    height: auto;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+}
+
+#name,#num,#mail,#pass_word,#conf_pass_word,#surname,#birthday{  /*CSS pour les inputs*/
+    width: 80%;
+    height: 40px;
+}
+.types_produits{
+    width: 100%;
+    height: 40px;
+}
+div ul {
+    display: flex;
+    justify-content: space-around
+}
+                /* Style spécifique au fichier user_compte.html*/
+
+
+ /*style specifique à la description des articles*/
+
+.containeur_bloc{  /*le div principale contenant tout le code*/
+    position:absolute;
+    top:20%;
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    display: flex;
+}
+
+.containeur_bloc div{ /*Propriétés communs aux differents div du conteneur*/
+    padding: 5px;
+}
+.bloc_image,.blocs_description{ /*Propriés communes aux deux sous conteneur*/
+    width: 50%;
+    max-height: 700px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+}
+.blocs_description{  /* Propriétés relatives à la description (Toutes informations sur l'article) des articles*/
+    font-size: 1.3em;
+}
+
+.bloc_name{  /* Propriété relatives aux noms de la l'article */
+    text-align:center;
+    width:100%
+    max-height:100px;
+    background-image: linear-gradient(to bottom,white,rgba(62, 210, 236, 0.637),rgba(0, 0, 0, 0.7));
+}
+
+.describe{  /*Propriéyés relatives à la desciption de l'article*/
+    font-size: 1em;
+    overflow:auto;
+    width: 100%;
+    max-height: 300px;
+}
+.describe h4 {
+text-align:center;
+}
+.request_visitor{  /* Propriétés relatives au bouton de contact*/
+    position:relative;
+    margin-bottom: 5px;
+}
+
+
+
+

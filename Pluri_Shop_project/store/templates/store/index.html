@@ -1,0 +1,28 @@
+{% extends 'store/bases.html' %}
+
+{% block content %}
+    {% if compte %}
+    <div class="containeur_bloc">
+         <div id="bloc_image">
+            <img src="{{compte.article_image.url}}" class="image_bloc" >
+        </div>
+        <div class="blocs_description">
+            <div class="bloc_name">
+                <h3>{{ compte.article_name }}</h3>
+            </div>
+            <div class="describe">
+                <h4>Description:</h4>
+                {{ compte.article_description }}
+            </div>
+            <div class="bloc_price">
+                <h3>PRIX:{{ compte.article_price}} Fcfa</h3>
+            </div>
+            <div class="request_visitor">
+                <button>Contacter le vendeur</button>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+
+{% endblock %}

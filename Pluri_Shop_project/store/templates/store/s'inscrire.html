@@ -1,0 +1,79 @@
+{% extends 'store/bases.html'%}
+
+{% block content %}
+
+        <form action="user_compte.php" method="POST">
+            {{form}}
+            <fieldset>
+                <legend>Créer un compte</legend>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="name">Nom</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name='name' id='name' required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="surname">Prénoms:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name='surname'id='surname' required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="birthday">Date de naissance:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="date" name='birthday'id='birthday' required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="sexe">Genre:</label>
+                    </div>
+                    <div class="inputs">
+                        <label for="sexe">Masculin</label> <input type="radio" name='sexe'id='sexe' value="1">
+                        <label for="sexe">Feminin</label><input type="radio" name='sexe'id='sexe' value="0">
+
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="mail">E-mail:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="email" name='mail'id='mail' required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="num">numero whatsapp :</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="tel" name='num'id='num' maxlength="11" minlength="8" required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="pass_word">Mot de Passe:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" name='pass_word'id='pass_word' minlength="8" required>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="labels">
+                        <label for="conf_pass_word">Confirmer mot de Passe:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" name='conf_pass_word' id='conf_pass_word' minlength="8" required>
+                    </div>
+                </div>
+                <button type="summit">Enregistrer</button>
+            </fieldset>
+        </form>
+        <script type="text/javascript" src="java.js"></script>
+{% endblock %}

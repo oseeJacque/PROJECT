@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'store/St.css' %}">
+</head>
+<body>
+<div class="tete">
+<header>
+    <div id="logo">
+
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="{% url 'listing' %}">Accueil</a></li>
+            <li><a href="{% url 'store:add_article' %}">Article</a></li>
+            <li><a href="{% url 'store:inscription' %}">s'inscrire</a></li>
+            <li><a href="{% url 'store:login' %}">Connexion</a></li>
+        </ul>
+    </div>
+    <div id='recherche'>
+        <label for='seach'>Recherhe:</label><br>
+        <input type="search" name="seach"  id="seach" size="30" placeholder="Ex:Clé USB">
+    </div>
+	</header>
+</div>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+{% extends 'store/bases.html' %}
+
+{% block content %}
+        <form action="article.html" method="POST">
+            <fieldset>
+                <legend>Add article</legend>
+                <div class="containeur">
+                    <div class="labels">
+                        <label for="article_name">Nom de l'article :</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="article_name" id="article_name">
+                    </div>
+                </div>
+                <div class="containeur">
+                    <div class="labels">
+                        <label for="article">Type d'article:</label>
+                    </div>
+                    <div class="inputs">
+                        <select name="article" id="article">
+                            <optgroup label="GSM mobile">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                                <option value="5"></option>
+                            </optgroup>
+                            <optgroup label="Outils informatique">
+                                <option value="6"></option>
+                                <option value="7"></option>
+                                <option value="8"></option>
+                                <option value="9"></option>
+                                <option value="10"></option>
+                            </optgroup>
+                            <optgroup label="Vêtements">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </optgroup>
+                            <optgroup label="Fourniture Scolaire">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </optgroup>
+                            <optgroup label="Nouriture">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </optgroup>
+                            <optgroup label="Entretien">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </optgroup>
+                            <optgroup label="Jouets">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="containeur">
+                    <div class="labels">
+                        <label for="article_description">Description de l'article:</label>
+                    </div>
+                    <div class="inputs">
+                        <textarea name="article_description" id="article_description" cols="60" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="containeur">
+                    <div class="labels">
+                        <label for="article_photo">Importer une photo de l'article</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="file" name="article_photo" id="article_photo" cols="60" rows="5"></input type="file">
+                    </div>
+                </div>
+                <div class="containeur">
+                    <div class="labels">
+                        <label for="article_price">Prix de l'article:</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="number" name="article_price" id="article_price" placeholder="Ex:2000">
+                    </div>
+                </div>
+                <button type="summit">Ajouter</button>
+            </fieldset>
+
+        </form>
+{% endblock %}
