@@ -10,6 +10,7 @@ urlpatterns = [
     path('s\'inscrire/',views.inscription,name='inscription'),
     path('login/',views.login,name='login'),
     path('detail/<int:article_id>',views.detail_article,name='detail_article'),
+    path('profil/<int:user_id>',views.sho_profil,name='profile')
 
 
 ]

@@ -17,18 +17,23 @@ def detail_article(request,article_id):
 
 def add_article(request):
     return  render(request, 'store/add_article.html',)
+def sho_profil(request,user_id):
+    user=User_compt.object.get(id=user_id)
+    return render((request,'store/user_profil.html',{'user':user}))
+
+#Création de compte par un vendeur
 def inscription(request):
     if request.method=='POST':
         form=create_compteforms(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('store:listing')
+            return redirect('store:profile')
         else:
             print(form.errors)
     else:
         form=create_compteforms()
 
-    return  render(request, 'store/s\'inscrire.html',{'form':form})
+    return  render(request, 'store/s\'user_profil.html',{'form':form})
 
 def login(request):
     return render(request,'store/connexion.html',)
